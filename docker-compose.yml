@@ -11,5 +11,7 @@ services:
     environment:
       DOCUMENT_ROOT: html
     tty: true    
+    volumes:
+      - ./files/:/var/www/html/files/
     ports:
       - 81:81

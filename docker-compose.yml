@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile
+    mem_limit: 1024m
+    mem_reservation: 512M
+    cpus: 2.5
+    container_name: dss
+    environment:
+      DOCUMENT_ROOT: html
+    tty: true    
+    ports:
+      - 81:81
